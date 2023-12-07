@@ -1,0 +1,42 @@
+<div class="container">
+    <form [formGroup]="productform">
+      <table class="table">
+        <tr>
+          <td>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Id</span>
+              </div>
+              <input type="text" aria-label="id" class="form-control" formControlName="id">
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Titre</span>
+              </div>
+              <input type="text" aria-label="title" class="form-control" formControlName="title">
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Prix</span>
+              </div>
+              <input type="text" aria-label="price" class="form-control" formControlName="price">
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="submit" aria-label="add" class="btn btn-primary" value="add" (click)="add()">
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+  

@@ -1,0 +1,27 @@
+
+<table class="table table-bordered table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Titre</th>
+      <th scope="col">Prix</th>
+      <th scope="col">Quantitée</th>
+      <th scope="col">Like</th>
+      <th scope="col">Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let r of listProdcut; let i = index">
+      <td>{{ r.id }}</td>
+      <td>{{ r.title }}</td>
+      <td>{{ r.price }}</td>
+      <td>{{ r.quantity }}</td>
+      <td>{{ r.like }}</td>
+      <td>
+        <button [routerLink]="[r.id]" class="btn btn-primary" (click)="show()">Show</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<button class="nav-link btn btn-primary" routerLinkActivate="active" routerLink="/add" style="display: block; margin: 0 auto; background-color: rgb(32, 32, 228); color: white;">Ajouter Produit</button>
+  
